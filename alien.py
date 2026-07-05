@@ -1,6 +1,8 @@
 import pygame
 from pygame.sprite import Sprite
 
+from resources import resource_path
+
 class Alien(Sprite):
     """Класс, представляющий собой одного пришельца"""
     
@@ -11,7 +13,7 @@ class Alien(Sprite):
         self.settings = ai_game.settings
 
         # Загружает изображение пришельца и получает прямоугольник
-        self.image = pygame.image.load('images/alien.bmp')
+        self.image = pygame.image.load(resource_path('images/alien.bmp'))
         self.rect = self.image.get_rect()
         
         # Каждый новый пришелец появляется в левом верхнем углу экрана
